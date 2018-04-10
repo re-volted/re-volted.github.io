@@ -27,34 +27,41 @@
         <!-- POCZĄTEK STRONY -->
         <!-- GÓRNE MENU -->
             <div id="gorne_menu">
-                <span id="logo">
-                    <a href="http://uderzam-w-web.interiowo.pl">uderzam-w-web.interiowo.pl</a>
-                </span>
-                <ul id="wlasciwe_gorne_menu">
-                    <li><a href="#wizytowka" title="O mnie"><span class="link">O mnie</span></a></li>
-                    <li><a href="#brak_tresci" title="Portfolio"><span class="link">Portfolio</span></a></li>
-                    <li style="border-right: 1px solid #ffffff;"><a href="#stopka" title="Kontakt"><span class="link">Kontakt</span></a></li>
-                </ul>
+                <div class="container content-space-between">
+                    <div id="logo">
+                        <a href="re-volted.github.io">re-volted.github.io</a>
+                    </div>
+                    <div class="inline-block">
+                        <ul id="wlasciwe_gorne_menu">
+                            <li><a href="#wizytowka" title="O mnie"><span class="link">O mnie</span></a></li>
+                            <li><a href="#brak_tresci" title="Portfolio"><span class="link">Portfolio</span></a></li>
+                            <li style="border-right: 1px solid #ffffff;"><a href="#stopka" title="Kontakt"><span class="link">Kontakt</span></a></li>
+                        </ul>
+                    </div>
+                </div>    
             </div>
             <!-- /GÓRNE MENU -->
         <!-- NAGŁÓWEK -->
         <div id="naglowek">
-            <!-- RAMKA TOP -->
-            <div id="ramka_top">
-                <div id="ramka_tytul">
-                    BARTOSZ KOWALCZYK
+            <!-- kontener -->
+            <div class="container content-center">
+                <!-- RAMKA TOP -->
+                <div id="ramka_top">
+                    <div id="ramka_tytul">
+                        BARTOSZ KOWALCZYK
+                    </div>
+                    <div id="ramka_opis">
+                        Junior Front-End Developer
+                    </div>
                 </div>
-                <div id="ramka_opis">
-                    Junior Front-End Developer
-                </div>
+                <!-- /RAMKA TOP -->
             </div>
-            <!-- /RAMKA TOP -->
         </div>
         <!-- /NAGŁÓWEK -->
         
         <!-- FOTO 1 - TŁO -->
         <div id="wizytowka">
-            <div id="wizytowka_box">
+            <div class="container content-center wizytowka-flex">
                 <div id="wizytowka_left">
                     <div class="card">
                         <div class="card_side back">
@@ -65,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="wizytowka_right">
+                <div id="wizytowka_right" class="self-end">
                     <p class="naglowek"><strong>Witam Cię na mojej stronie!</strong></p>
                     <hr>
                     <p class="tekst"><strong><span style="font-size: 1.1em">Nazywam się Bartosz Kowalczyk</span></strong> i 
