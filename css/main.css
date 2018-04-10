@@ -119,6 +119,7 @@ body
 
 .content-space-between {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -175,7 +176,7 @@ body
 #wlasciwe_gorne_menu li a
 {
     text-decoration: none;
-    padding: 0px 15px;
+    padding: 0px 1rem;
     font-size: 1.25rem; /* 20px : 16px */
     line-height: 2.5rem; /* 40px : 16px */
     /* height: 2em; /* 40px : 20px (z font size) */
@@ -199,7 +200,7 @@ span.link
 {
     /*position: relative;*/
     /*width: 100%;*/
-    height: 300px;
+    height: 18.75rem; /* 300:16 */
     background-color: #007de7;
     display: flex;
     align-items: center;
@@ -211,8 +212,8 @@ span.link
 #ramka_top
 {
     z-index: 1001;
-    min-width: 400px;
-    height: 140px;
+    width: 25rem; /*400:16px*/
+    height: 9rem;
     border: 2px solid #ffffff;
     text-align: center;
     color: #ffffff;
@@ -267,11 +268,6 @@ span.link
     justify-content: center;
 }
 
-.wizytowka-flex {
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 #wizytowka_left
 {
     /*margin: 0px 5rem;*/
@@ -303,12 +299,12 @@ span.link
 #wizytowka_right
 {
     /*margin: 0px 0rem;*/
-    width: 400px;  
+    width: 25rem;  
     text-align: justify;
 }
 #wizytowka_right p.tekst, p.tekst_rozwin
 {
-    font-size: 1.27em;
+    font-size: 1.27rem;
     font-weight: 200;
     font-style: italic;
     line-height: 140%;
@@ -334,21 +330,15 @@ span.link
 }
 p.naglowek
 {
-    font-size: 2.17em;
+    font-size: 2.17rem;
     font-weight: 500;
     animation: anim_text_shadow 1s infinite alternate;
 }
 
 
 /*TREŚĆ*/
-div.tresc
+.tresc
 {
-    width: 1200px;
-    /* height: 800px; */
-    margin: 100px auto;
-    text-align: center;
-    font-size: 2em; /* 32px : 16px */
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
@@ -360,19 +350,33 @@ div.tresc
 
 .scena
 {
-    min-width: 7.8125em; /* 250px : 32px */
-    min-height: 7.8125em; /* 250px : 32px */
-    margin: 0.390625em; /* 12.5px : 32px (font size rodzica!) */
-    perspective: 31.25em; /* 1000px : 32px */
+    min-width: 15.625rem; /* 250px : 16px */
+    min-height: 15.625rem; /* 250px : 16px */
+    margin: 0.78125rem; /* 12.5px : 16px */
+    perspective: 62.5em; /* 1000px : 16px */
     transition: 1s;
     text-align: center;
-    font-size: 1em; 
+    font-size: 2rem; 
+    line-height: 15.625rem; /* 250:16 */
+}
+.uciety-rog {
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 7.8125rem; /* 250px : 16px */
+    height: 8.5rem; /* 250px : 16px */
+    transform: rotate(-45deg) translate(-5.5rem, 0.2rem);
+    box-shadow: 5px 0px 2rem rgba(255, 255, 255, 0.5);
+    /*border-right: 3px solid rgba(255, 255, 255, 0.5);*/
+    background-color: white;
+    backface-visibility: hidden;
 }
 .card
 {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 15.625rem; /* 250:16 */
+    height: 15.625rem; /* 250:16 */
     transition: 1s;
     transform-style: preserve-3d;
 }
@@ -386,12 +390,12 @@ div.tresc
 .front
 {
     position: absolute;
-    line-height: 7.8125em; /* 250px : 32px */
+    line-height: 15.625rem; /* 250:16 */
 }
 .back
 {
     position: absolute;
-    line-height: 7.8125em; /* 250px : 32px */
+    line-height: 15.625rem; /* 250:16 */
     transform: rotateX(180deg);
 }
 .card:hover
@@ -420,28 +424,23 @@ div.tresc
     width: 100%;
     height: 15.625em; /* 250px : 16px */
     background-color: #007de7;
-}
-#stopka_box
-{
-    position: inherit;
-    margin: 0px auto;
-    width: 1200px;
-    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: flex-end; /* wyrównanie w pionie */
+    justify-content: center; /* wyrównanie w poziomie */
+    
 }
 #img_stopka
 {
-    position: absolute;
-    left: 7.5%; /* 90px : 1200px */
-    top: 2.5em; /* 40px : 16px */
-    width: 50%;  /* 1200px : 600px */
-    height: 60%; /* 150px : 250px */
+    width: 37.5rem;  /* 600px:16px */
+    height: 9.375rem; /* 150px:16px */
     border: 2px solid white;
     background-image: url('../images/img_stopka.jpg');
     animation: podswietlanie 1s infinite alternate;
 }
 #img_tekst
 {
-    position: absolute;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -458,24 +457,21 @@ div.tresc
 }
 #kontakt
 {
-    position: absolute;
-    right: 0; /* 5px : 16px */
-    top: 16%; /* 250px : 16px */
-    width: 25%; /* 300px : 1200px */
+    width: 18.75rem; /* 300px : 16px */
     color: white;
     font-weight: 200;
-    line-height: 1.5625em; /* 25px : 16px */
+    line-height: 1.5625rem; /* 25px : 16px */
     border-left: 2px solid white;
 }
 #kontakt p
 {
-    margin-left: 6.666666666%; /* 20px : 300px */
+    margin-left: 1rem;
 }
 #kontakt p.naglowek
 {
-    font-size: 1.75em; /* 28px : 16px */
+    font-size: 1.75rem; /* 28px : 16px */
     font-weight: 500;
-    margin-bottom: 0.3em; /* 5px : 16px */
+    margin-bottom: 0.3rem; /* 5px : 16px */
 }
 #kontakt a
 {
@@ -491,7 +487,6 @@ div.tresc
 }
 #prawa_autorskie
 {
-    position: absolute;
     text-align: center;
     width: 100%;
     bottom: 0px;
@@ -631,12 +626,16 @@ div.tresc
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media (max-width: 767px) { 
+@media only screen and (max-width: 767px) { 
     * {
         transition: 1s;
+        font-size: 80%;
     }
     body {
         /*width: 334%;*/
+    }
+    #gorne_menu {
+        width: 360px;
     }
     .container{
         width: 90%;
@@ -653,7 +652,23 @@ div.tresc
     }
     #ramka_top {
         margin-bottom: -4rem;
+        width: 20rem;
+        height: 7rem;
+        font-size: 0.7rem;
     }
+    #stopka{
+        height: 300px;
+    }
+    #img_stopka {
+        width: 300px;  /* 600px:16px */
+        height: 75px;; /* 150px:16px */
+        background-size: contain;
+        margin: -30px 0px 30px 0px;
+    }
+    #kontakt .tekst{
+        font-size: 1rem;
+    }
+    
     
 }
 
