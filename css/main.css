@@ -1,0 +1,696 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    /*color: #222;
+    font-size: 1em;
+    line-height: 1.4;*/
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles----------------------------------------------------
+   ========================================================================== */
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-size: 100%;
+}
+body
+{
+    font-family: 'Catamaran', Verdana, Arial;
+}
+/* MENU GORNE ---------------------------------*/
+#gorne_menu
+{
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    left: auto;
+    width: 100%;
+    height: 2.5em; /* 40px : 16px */
+    background-color: #007de7;
+    color: white;
+}
+#gorne_menu a, #gorne_menu a:visited
+{
+    text-decoration: none;
+    color: white;
+}
+/* LOGO -------------------------- */
+#logo
+{
+    position: absolute;
+    left: 7%;
+    font-size: 1.5em;
+    line-height: 1.66666666666em; /* 40px : 1.7*16px = 40/27,2 */
+    /* border-bottom: 1px solid white; */
+    opacity: 0.7;
+    transition: 0.3s;
+}
+#logo:hover
+{
+    opacity: 1;
+    /* border-bottom: 1px dashed white; */
+}
+/* MENU PO PRAWEJ ---------------- */
+#wlasciwe_gorne_menu
+{
+    position: absolute;
+    right: 3%;
+}
+#wlasciwe_gorne_menu li
+{
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #ffffff;
+    font-weight: 500;
+}
+#wlasciwe_gorne_menu li a
+{
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 1.25em; /* 20px : 16px */
+    line-height: 2em; /* 40px : 20px (z font size) */
+    /* height: 2em; /* 40px : 20px (z font size) */
+    display: inline-block;
+    transition: 0.3s;
+}
+#wlasciwe_gorne_menu li a:hover
+{
+    background-color: #ffffff;
+    color: #007de7;
+}
+span.link
+{
+    display: inline-block;
+}
+/* KONIEC GORNEGO MENU ----------------------------- */
+
+/* NAGLOWEK */
+#naglowek
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #007de7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RAMKA TOP ---------------------------------*/
+#ramka_top
+{
+    z-index: 1001;
+    min-width: 400px;
+    height: 140px;
+    border: 2px solid #ffffff;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1c97ff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.4s;
+    animation: podswietlanie 1s infinite alternate;
+}
+#ramka_top:hover
+{
+    background-color: #43a8fd;
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+#ramka_tytul
+{
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    font-size: 2em;
+    transition: 1s;
+}
+#ramka_top:hover #ramka_tytul
+{
+    text-shadow: 0px 0px 15px rgba(255,255,255,0.5);
+}
+
+#ramka_opis
+{
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    font-size: 1.3em;
+    opacity: 0.7;
+}
+
+/* KONIEC RAMKA TOP ---------------------------------*/
+
+/* wizytowka */
+#wizytowka
+{
+    position: relative;
+    background-image: url('../images/background-header-30_2.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 100%;
+    height: 720px;
+    border-top: 3px solid #ccc;
+}
+#wizytowka_box
+{
+    position: relative;
+    top: 20%;
+    margin: 0px auto;
+    width: 1200px;
+}
+#wizytowka_left
+{
+    position: relative;
+    top: 50px;
+    left: 90px;
+    height: 250px;
+    width: 250px; 
+    border-radius: 125px;
+    border: 2px solid white;
+    background-size: 250px 250px;
+    opacity: 1;
+    transition: 1s;
+    perspective: 1500px;
+    animation: podswietlanie 1s infinite alternate;
+}
+#wizytowka_left:hover
+{
+    opacity: 1;
+}
+#wizytowka_left div.front
+{
+    background-image: url('../images/profil.png');
+    background-size: 250px 250px;
+}
+#wizytowka_left div.back
+{
+    background-image: url('../images/profil_back.png');
+    background-size: 250px 250px;
+}
+#wizytowka_right
+{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 400px;  
+    text-align: justify;
+}
+#wizytowka_right p.tekst, p.tekst_rozwin
+{
+    font-size: 1.27em;
+    font-weight: 200;
+    font-style: italic;
+    line-height: 140%;
+}
+#wizytowka_right p.tekst_rozwin, #wizytowka_right hr.hr_rozwin
+{
+    margin-top: -50px;
+    opacity: 0;
+    transition: 0.7s;
+}
+#wizytowka_right:hover p.tekst_rozwin
+{
+    margin-top: 5px;
+    opacity: 1;
+    font-style: italic;
+    line-height: 140%;
+}
+#wizytowka_right:hover hr.hr_rozwin
+{
+    margin-top: 5px;
+    opacity: 1;
+    display: block;
+}
+p.naglowek
+{
+    font-size: 2.17em;
+    font-weight: 500;
+    animation: anim_text_shadow 1s infinite alternate;
+}
+
+
+/*TREŚĆ*/
+div.tresc
+{
+    width: 1200px;
+    /* height: 800px; */
+    margin: 100px auto;
+    text-align: center;
+    font-size: 2em; /* 32px : 16px */
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: flex-start; /* wyrównanie w pionie */
+    justify-content: center; /* wyrównanie w poziomie */
+}
+
+/* TYMCZASOWA WSTAWKA */
+
+.scena
+{
+    min-width: 7.8125em; /* 250px : 32px */
+    min-height: 7.8125em; /* 250px : 32px */
+    margin: 0.390625em; /* 12.5px : 32px (font size rodzica!) */
+    perspective: 31.25em; /* 1000px : 32px */
+    transition: 1s;
+    text-align: center;
+    font-size: 1em; 
+}
+.card
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+.card_side
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.front
+{
+    position: absolute;
+    line-height: 7.8125em; /* 250px : 32px */
+}
+.back
+{
+    position: absolute;
+    line-height: 7.8125em; /* 250px : 32px */
+    transform: rotateX(180deg);
+}
+.card:hover
+{
+    transform: rotateX(180deg);
+}
+.bgblue
+{
+    background-color: cornflowerblue;
+}
+.bgred
+{
+    background-color: crimson;
+}
+
+/* KONIEC TYMCZASOWEJ WSTAWKI*/
+
+
+
+
+
+/* STOPKA ------------------------------- */
+#stopka
+{
+    position: relative;
+    width: 100%;
+    height: 15.625em; /* 250px : 16px */
+    background-color: #007de7;
+}
+#stopka_box
+{
+    position: inherit;
+    margin: 0px auto;
+    width: 1200px;
+    height: 100%;
+}
+#img_stopka
+{
+    position: absolute;
+    left: 7.5%; /* 90px : 1200px */
+    top: 2.5em; /* 40px : 16px */
+    width: 50%;  /* 1200px : 600px */
+    height: 60%; /* 150px : 250px */
+    border: 2px solid white;
+    background-image: url('../images/img_stopka.jpg');
+    animation: podswietlanie 1s infinite alternate;
+}
+#img_tekst
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em; /* 32px : 16px */
+    font-weight: 200;
+    line-height: 0.87em; /* tak, żeby wycentrowało napis */
+    background-color: rgba(255,255,255, 0.5);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#img_stopka:hover #img_tekst
+{
+    opacity: 1;
+}
+#kontakt
+{
+    position: absolute;
+    right: 0; /* 5px : 16px */
+    top: 16%; /* 250px : 16px */
+    width: 25%; /* 300px : 1200px */
+    color: white;
+    font-weight: 200;
+    line-height: 1.5625em; /* 25px : 16px */
+    border-left: 2px solid white;
+}
+#kontakt p
+{
+    margin-left: 6.666666666%; /* 20px : 300px */
+}
+#kontakt p.naglowek
+{
+    font-size: 1.75em; /* 28px : 16px */
+    font-weight: 500;
+    margin-bottom: 0.3em; /* 5px : 16px */
+}
+#kontakt a
+{
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+#kontakt a:hover
+{
+    opacity: 1;
+    letter-spacing: 0.2px;
+}
+#prawa_autorskie
+{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0px;
+    margin: 20px 0px 10px 0px;
+    color: white;
+    opacity: 0.3;
+    font-weight: 200;
+    transition: 0.3s;
+}
+#prawa_autorskie:hover
+{
+    opacity: 0.7;
+}
+#go_to_top
+{
+    position: absolute;
+    right: 2%;
+    bottom: 10%;
+    animation: anim_go_to_top 0.5s infinite alternate;
+}
+
+/* ==========================================================================
+   ANIMACJE
+   ========================================================================== */
+@keyframes podswietlanie
+{
+    to
+    {
+        box-shadow: 0px 0px 25px rgba(255,255,255,0.7);
+    }
+}
+
+@keyframes anim_text_shadow
+{
+    to
+    {
+        text-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    }
+}
+@keyframes przygaszanie
+{
+    to
+    {
+        opacity: 0.8;
+    }
+}
+
+@keyframes anim_go_to_top
+{
+    to
+    {
+        transform: translate(0px, -3px);
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
