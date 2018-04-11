@@ -280,21 +280,14 @@ span.link
     transition: 1s;
     perspective: 500px;
     animation: podswietlanie 1s infinite alternate;
+    background-image: url('../images/profil.png');
+    background-size: 250px 250px;
 }
 #wizytowka_left:hover
 {
     opacity: 1;
 }
-#wizytowka_left div.front
-{
-    background-image: url('../images/profil.png');
-    background-size: 250px 250px;
-}
-#wizytowka_left div.back
-{
-    background-image: url('../images/profil_back.png');
-    background-size: 250px 250px;
-}
+
 
 #wizytowka_right
 {
@@ -422,7 +415,7 @@ p.naglowek
 {
     position: relative;
     width: 100%;
-    height: 15.625em; /* 250px : 16px */
+    height: 15.625rem; /* 250px : 16px */
     background-color: #007de7;
     display: flex;
     flex-direction: row;
@@ -444,7 +437,7 @@ p.naglowek
     height: 100%;
     width: 100%;
     text-align: center;
-    font-size: 2em; /* 32px : 16px */
+    font-size: 2rem; /* 32px : 16px */
     font-weight: 200;
     line-height: 0.87em; /* tak, żeby wycentrowało napis */
     background-color: rgba(255,255,255, 0.5);
@@ -636,9 +629,13 @@ p.naglowek
     }
     #gorne_menu {
         width: 360px;
+        height: 70px
     }
     .container{
         width: 90%;
+    }
+    #wizytowka_left{
+        margin: -20px 0px 10px 0px;
     }
     .wizytowka-flex {
         justify-content: center;
@@ -660,15 +657,20 @@ p.naglowek
         height: 300px;
     }
     #img_stopka {
-        width: 300px;  /* 600px:16px */
-        height: 75px;; /* 150px:16px */
+        width: 300px;  /* 600px:px */
+        height: 75px;; /* px */
         background-size: contain;
         margin: -30px 0px 30px 0px;
     }
-    #kontakt .tekst{
+    #img_tekst {
+        font-size: 1.3rem;
+    }    
+    #kontakt .tekst, a{
         font-size: 1rem;
     }
-    
+    #prawa_autorskie{
+        font-size: 0.7rem;
+    }
     
 }
 
@@ -680,9 +682,22 @@ p.naglowek
     .container{
         width: 750px;
     }
+    .content-space-between {
+        justify-content: space-around;
+        flex-direction: column;
+    }
     .wizytowka-flex {
         justify-content: space-around;
         flex-direction: row;
+    }
+    #stopka{
+        height: 425px;
+    }
+    #img_stopka {
+        margin: 1rem 0px;
+    }
+    #kontakt {
+        margin: 10px 0px 0px 0px;
     }
 }
 
@@ -693,6 +708,13 @@ p.naglowek
     }
     .container{
         width: 970px;
+    }
+    #stopka{
+        height: 15.625rem;
+    }
+    .content-space-between {
+        justify-content: space-between;
+        flex-direction: row;
     }
     .wizytowka-flex {
         justify-content: space-around;
@@ -713,6 +735,13 @@ p.naglowek
     }
     #logo {
         margin: 0px 1rem;
+    }
+    #stopka{
+        height: 15.625rem;
+    }
+    .content-space-between {
+        justify-content: space-between;
+        flex-direction: row;
     }
     .inline-block {
         margin: 0px 1rem;
